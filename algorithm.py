@@ -17,7 +17,7 @@ training_set = []
 y_train = []
 
 # load the images 
-for i in range(3):
+for i in range(3): #change to number of images
     img = load_img(str(i+1))
     array = keras.preprocessing.image.img_to_array(img)
     array = cv2.resize(array, dsize=(299,299))
