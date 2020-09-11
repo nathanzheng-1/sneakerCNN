@@ -15,9 +15,7 @@ csv_writer = csv.writer(csv_file)
 for i in range(1): #changeable to # of pages
     page_url = "https://stockx.com/sneakers/top-selling?page=" + str(i+1)
     uClient = urllib.request.Request(url=page_url, headers=headers)
-    print('hi')
     fullpage = urllib.request.urlopen(uClient)
-    print('hi')
     pagetext = soup(fullpage, "lxml")
     tiles = pagetext.findAll('div', class_ = 'tile browse-tile false')
 
